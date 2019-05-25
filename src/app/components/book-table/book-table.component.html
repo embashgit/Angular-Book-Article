@@ -1,0 +1,43 @@
+<div>
+  <app-navbar></app-navbar>
+  <div style='padding-top:25px' class="book-form fullHeight">
+    <div id="Skyball"></div>
+    <div id="skyball2"></div>
+
+    <div class="mat-elevation-z8 data-table">
+      <table class="full-width-table" mat-table [dataSource]="dataSource">
+        <ng-container matColumnDef="title">
+          <th mat-header-cell *matHeaderCellDef >Book Title</th>
+          <td (click)="populateForm(book)"   mat-cell *matCellDef="let book">{{book.title}}</td>
+        </ng-container>
+        <ng-container matColumnDef="category">
+          <th mat-header-cell *matHeaderCellDef >Book Category</th>
+          <td (click)="populateForm(book)" mat-cell *matCellDef="let book">{{book.category}}</td>
+        </ng-container>
+        <ng-container matColumnDef="author">
+          <th mat-header-cell *matHeaderCellDef >Book Author</th>
+          <td (click)="populateForm(book)" mat-cell *matCellDef="let book">{{book.author}}</td>
+        </ng-container>
+        <ng-container matColumnDef="description">
+          <th mat-header-cell *matHeaderCellDef >Description</th>
+          <td (click)="populateForm(book)" mat-cell *matCellDef="let book">{{book.description}}</td>
+        </ng-container>
+        <ng-container matColumnDef="action">
+            <th mat-header-cell *matHeaderCellDef >Action</th>
+            <td style="text-align:center;" mat-cell *matCellDef="let book">
+              <button (click)="onDelete(book.BookID)" mat-button>
+                <mat-icon>cancel</mat-icon>
+              </button></td>
+          </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+      <!-- <mat-paginator #paginator
+      [length]="dataSource.length"
+      [pageIndex]="0"
+      [pageSize]="50"
+      [pageSizeOptions]="[25, 50, 100, 250]">
+  </mat-paginator> -->
+      </div>
+  </div>
+</div>

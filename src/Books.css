@@ -1,0 +1,237 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(http://fonts.gstatic.com/s/opensans/v13/cJZKeOuBrn4kERxqtaUH3ZBw1xU1rKptJj_0jans920.woff2) format('woff2');
+}
+:root{
+    --primaryFont:'Open Sans',sans-serif;
+  }
+
+  .cloudNav{
+    align-self: center;
+    align-items: center;
+      width:120%;
+      height: 150px;
+      /* border-radius: 50%; */
+    /* /  background:transparent ; */
+      background: linear-gradient(210.28deg, #712519  37.28%, #f0eff838    76.65%);
+      /* background: linear-gradient(210.28deg, #FEB665 37.28%, #F66EB4 76.65%); */
+      position:fixed;
+       top:-90px;
+       left:-40px;
+       z-index: 100000;
+  }
+
+  .cloudDiv{
+    width:100px ;
+    height: 100px;
+    border-radius: 50%;
+    opacity: 0.3;
+    background: linear-gradient(210.28deg, #FEB665 37.28%, #F66EB4 76.65%);
+    position:fixed;
+     top:290px;
+     left:150px;
+     z-index: 0.8;
+     transform: rotate(20deg);
+      }
+  .desc{
+    margin-top: 30%;
+      text-align: center;
+      color: #384F7D;
+      /* padding:10px; */
+  }
+  .logo{
+    position: fixed;
+    top:-10px;
+    left: 20px;
+    transition: 0.5s;
+  }
+  .menuIcon{
+    position: fixed;
+    top:15px;
+    color: #EEECFF;
+    right: 20px;
+    transition: 0.5s;
+  }
+  .logo img{
+    height: 80px;
+  }
+  .details{
+    font-size:13px;
+    text-align: center;
+    color: #888888;
+  }
+  .card-title{
+    text-align: center;
+      font-size:14px;
+      color: #384F7D;
+  }
+  .card-item{
+      display: inline-block;
+      color: #384F7D;
+  }
+  .rating,.desc img{
+    display: inline-block;
+  }
+  .rating{
+      align-items: center;
+      align-self: center;
+      height: 20px;
+      width: 20px;
+      padding-left:10px;
+  }
+  .desc p{
+      margin:10px 0 30px 0;
+  }
+  .book-section{
+      padding:5px;
+      margin-top: 16%;
+      width: 80%;
+  }
+  #title{
+    font-weight: 600;
+    font-size: 30px;
+    letter-spacing: 2;
+     text-transform: uppercase;
+    color: rgba(12, 46, 112, 0.8);
+    margin-bottom: 5%;
+  }
+  #mybooksheader{
+    line-height: normal;
+    letter-spacing: 1px;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 30px;
+    /* text-transform: uppercase; */
+    /* color: #fff; */
+    color: rgba(12, 46, 112, 0.8);
+      text-align: center;
+      /* margin-left: 100px; */
+      font-family: var(--primaryFont);
+  }
+.cards{
+  position: relative;
+    background: #fff;
+    border-radius: 8px;
+    display: inline-block;
+    padding:15px 10px 5px 10px;
+    width: 26%;
+    height: 40%;
+    margin:15px 10px 10px 10px;
+    flex-direction: column;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+.card-outline{
+    background:transparent;
+    box-shadow: none;
+}
+.lg{
+    font-size:25px;
+    margin-bottom: 40px;
+}
+.item-footer{
+    font-size: 22px;
+    margin-top:15px;
+    margin-bottom: 20px;
+line-height: 22px;
+text-decoration-line: underline;
+color: #384F7D;
+}
+.item-des{
+    justify-content: center;
+    align-items: center;
+    font-family: var(--primaryFont);
+    width:60%;
+    margin: auto;
+    line-height: 22px;
+color: rgba(56, 79, 125, 0.8);
+    text-align: justify;
+
+}
+  .cardSection{
+      font-family: var(--primaryFont);
+      padding: 10px;
+      justify-content: center;
+      text-align: center;
+      flex-direction: row;
+  }
+  .drawer{
+      height:100vh;
+      background:  #EEECFF;
+      color: #fff;
+  }
+  #book-title{
+    position:fixed;
+    top:40px;
+     z-index:1000;
+    right:38%;
+    color:#fff;
+     font-family: var(--primaryFont);
+  }
+  .searchbox{
+    position:fixed;
+    top:110px;
+     z-index:1000;
+    right:30%;
+    width:40%;
+  }
+ #bookSearchInput{
+    padding: 0.7em;
+    font-size: 25px;
+    border:0;
+    width: 100%;
+    align-self: auto;
+    outline: 0;
+    z-index: 5000;
+   border-radius:12px;
+    font-family: var(--primaryFont);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+ }
+
+ #searchIcon{
+    position: absolute;
+    right: 0;
+    top:18px;
+    height: 30px;
+    width: 30px;
+ }
+ @media (min-width:320px) and (max-width:650px){
+    #bookSearchInput{
+        font-size: 14px;
+    }
+    .searchbox{
+        width: 60%;
+        top:90px;
+        right:22%;
+    }
+    .cards{
+      display: block;
+      width: 60%;
+      margin: auto;
+      margin-top: 4%;
+      z-index: 1000;
+      height: 10%;
+      margin-bottom: 4%;
+    }
+    #mybooksheader{
+
+        text-align: justify;
+    }
+    .book-section{
+        margin-top: 200%;
+    }
+    .review-sec{
+        margin-top:20%;
+    }
+    #book-title{
+        font-size: 20px;
+        top:40px;
+       right:33%;
+    }
+    #searchIcon{
+        top:12px;
+        height: 15px;
+        width: 15px;
+    }
+ }

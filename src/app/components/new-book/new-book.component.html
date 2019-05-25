@@ -1,0 +1,57 @@
+<div>
+  <app-navbar></app-navbar>
+  <div style='padding-top:25px' class="book-form fullHeight">
+    <div id="Skyball"></div>
+    <div id="skyball2"></div>
+    <div class="layer-item">
+      <form #form="ngForm" (submit)="onSubmit(form)">
+        <mat-card-header>
+          <p class="title">New Book</p>
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <div class="form-wrapper">
+
+          <div class="form-item">
+            <mat-form-field [color]="primary">
+              <input matInput placeholder="Book Title" name="title" #title="ngModel"
+                [(ngModel)]="service.formData.title" required>
+            </mat-form-field>
+            <div class="validation-error" *ngIf="title.invalid && title.touched">Title field is required</div>
+          </div>
+
+          <div class="form-item">
+            <mat-form-field>
+              <input matInput placeholder="Author" name="author" #author="ngModel" [(ngModel)]="service.formData.author"
+                required>
+            </mat-form-field>
+            <div class="validation-error" *ngIf="author.invalid && author.touched">Author field is required</div>
+          </div>
+
+          <div class="form-item">
+            <mat-form-field appearance="standard">
+              <mat-label>Description</mat-label>
+              <textarea matInput name="description" #description="ngModel" [(ngModel)]="service.formData.description"
+                placeholder="Tell Us about the book" required></textarea>
+            </mat-form-field>
+            <div class="validation-error" *ngIf="description.invalid && description.touched">Description field is required</div>
+          </div>
+          <div class="form-item">
+
+            <mat-form-field>
+              <mat-select class="select" name="category" [(ngModel)]="service.formData.category" placeholder="Category"
+                floatPlaceholder="always" required>
+                <mat-option *ngFor="let item of categories" [value]="item.name">{{item.name}}</mat-option>
+              </mat-select>
+
+            </mat-form-field>
+          </div>
+        </div>
+
+        <mat-card-actions>
+          <button mat-stroked-button type="submit" [disabled]="form.invalid"  style="margin-top: 30px;" class="addbook" color="secondary">Create Book</button>
+          <!-- <button mat-button>SHARE</button> -->
+        </mat-card-actions>
+      </form>
+    </div>
+  </div>
+</div>

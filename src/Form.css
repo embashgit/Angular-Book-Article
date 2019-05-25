@@ -1,0 +1,249 @@
+@import './Books.css';
+:root{
+    --primaryFont:CircularStd,sans-serif;
+  }
+.formSection{
+    z-index: 10000;
+    margin: auto;
+    text-align: center;
+    border-radius: 5px;
+    height: 100%;
+    padding:10px;
+    width: 33%;
+    flex-direction: column;
+    justify-content: center;
+    /* box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23); */
+}
+
+
+#booklabel{
+    position: absolute;
+    top: 15px;
+    right:80px;
+    width: 100px;
+  }
+  #booklabel,#timelinelabel,#notlabel,#revewlabel{
+    display: none;
+  }
+
+  #books:hover #booklabel{
+  display: block;
+  }
+
+  #notifications:hover #notlabel{
+    display: block;
+  }
+
+  #Timeline:hover #timelinelabel{
+    display: block;
+  }
+  #reviews:hover #revewlabel{
+    display: block;
+  }
+
+.formControl{
+    z-index:10000 ;
+    position: relative;
+    margin:10px 5px 10px 5px;
+    padding:10px;
+    /* box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23); */
+}
+#info{
+    font-family:var(--primaryFont);
+font-size: 15px;
+margin-top: 10px;
+line-height: normal;
+text-align: center;
+
+color: #445984;
+}
+label{
+    position: absolute;
+    left: 12px;
+    opacity: .5;
+    top:-12px;
+    font-size: 13px;
+    font-family: var(--primaryFont);
+}
+#inputLine{
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    top: 49px;
+    z-index: 10000;
+    background:  linear-gradient(179.24deg, #BAFB67 -5.37%, #00D23A 196.64%);
+    /* border-bottom-color:  linear-gradient(179.24deg, #BAFB67 -5.37%, #00D23A 196.64%);  */
+}
+#textField{
+    padding: 0.7em;
+    font-size: 15px;
+    border:0;
+    width: 100%;
+    align-self: auto;
+    outline: 0;
+    z-index: 5000;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom-width: 3px;
+    font-family: var(--primaryFont);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+#Skyball{
+    position: absolute;
+    top:-80%;
+    right: 0;
+    width: 290px;
+    /* z-index: 10; */
+    height:290px;
+    border-radius: 50%;
+    background: linear-gradient(315deg, rgba(255, 255, 255, 0.61) 3.5%, rgba(121, 171, 252, 0.61) 93.61%, rgba(96, 108, 255, 0.61) 147.83%);
+    animation: skywave 10s 2s linear infinite;
+}
+.validation-error{
+  position: absolute;
+  top:0;
+  color: yellow;
+  font-family: var(--primaryFont);
+  font-size: 12px;
+}
+.form-wrapper{
+  width: 100%;
+  margin-top: 30px;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.form-item{
+  position: relative;
+  display: inline-block;
+  margin-inline-start:20px;
+}
+#skyball2{
+    position: absolute;
+    bottom:13%  ;
+    right:25%;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    z-index: 0.5;
+    background:linear-gradient(228.76deg, #2DEEF9 -34.42%, #E084F1 127.18%);
+    transition: 0.75s;
+    animation: trace 10s linear infinite;
+    /* transform: rotate(-15.82deg); */
+}
+#passwordIcon{
+    position:absolute;
+    top:18px;
+    right: 5px;
+}
+.bulbSection{
+    text-align: center;
+    margin: auto;
+    width: 70px;
+    height: 70px;
+    padding: 30px;
+    border-radius: 50%;
+    z-index: 10000;
+    background: linear-gradient(147.47deg, #FEB665 24.48%, #F66EB4 118.65%);
+}
+
+
+@keyframes trace{
+  0%{
+    bottom: 13%;
+    right: 30%;
+    transform:scale(0.7);
+  }
+  25%{
+    right: 30%;
+    transform:scale(1.3);
+    opacity: 0.5;
+    bottom: 67%;
+  }
+  50%{
+    right: 65%;
+    bottom: 67%;
+   transform:scale(0.7);
+  }
+  75%{
+    bottom:13%;
+    right: 65%;
+    scale: 1.4;
+  }
+  100%{
+    bottom: 13%;
+    right:25%;
+    transform: scale(0.9);
+  }
+}
+
+
+@keyframes skywave{
+    0%{
+        right: 2%;
+        top:-70%;
+        transform: scale(0.5);
+        opacity: 0.6;
+        z-index: 1;
+
+    }
+    30%{
+        right:50%;
+top:70%;
+        transform:scale(0.25);
+        opacity:0;
+        z-index: 0;
+    }
+    60%{
+        right:80%;
+        top:40%;
+        transform:scale(0.5);
+        z-index: 0;
+    }
+    80%{
+        right:90%;
+        top:-70%;
+        transform:scale(0.4);
+        z-index: 0;
+    }
+    100%{
+        right: 0%;
+        top:-80%;
+        z-index: 0;
+        transform: scale(1);
+
+    }
+}
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+    .formSection{
+        width: 220px;
+    }
+
+    #skyball2{
+        position: absolute;
+        top:45%  ;
+        right:10%;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+
+    }
+    #textField{
+        font-size: 13px;
+    }
+    #inputLine{
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        top: 44px;
+        z-index: 10000;
+        background:  linear-gradient(179.24deg, #BAFB67 -5.37%, #00D23A 196.64%);
+    }
+
+}
